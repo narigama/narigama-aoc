@@ -1,0 +1,52 @@
+[package]
+name = "narigama-aoc"
+version = "0.1.0"
+edition = "2021"
+authors = ["David Smith <david@narigama.dev>"]
+
+[features]
+default = [
+    "y2022d01","y2022d02","y2022d03","y2022d04","y2022d05",
+    "y2022d06","y2022d07","y2022d08","y2022d09","y2022d10",
+    "y2022d11","y2022d12","y2022d13","y2022d14","y2022d15",
+    "y2022d16","y2022d17","y2022d18","y2022d19","y2022d20",
+    "y2022d21","y2022d22","y2022d23","y2022d24","y2022d25",
+]
+
+y2022d01 = []
+y2022d02 = []
+y2022d03 = []
+y2022d04 = []
+y2022d05 = []
+y2022d06 = []
+y2022d07 = []
+y2022d08 = []
+y2022d09 = []
+y2022d10 = []
+y2022d11 = []
+y2022d12 = []
+y2022d13 = []
+y2022d14 = []
+y2022d15 = []
+y2022d16 = []
+y2022d17 = []
+y2022d18 = []
+y2022d19 = []
+y2022d20 = []
+y2022d21 = []
+y2022d22 = []
+y2022d23 = []
+y2022d24 = []
+y2022d25 = []
+
+[dependencies]
+criterion = "0.4.0"
+dotenv = "0.15.0"
+eyre = "0.6.8"
+reqwest = { version = "0.11.13", features = ["blocking", "cookies"] }
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
+
+[[bench]]
+name = "aoc2022"
+harness = false
