@@ -35,7 +35,7 @@ pub fn part_one(input: &[u64]) -> u64 {
 
 pub fn part_two(input: &[u64]) -> u64 {
     let mut input = input.to_vec(); // clone required, sorting ahead
-    input.sort();
+    input.sort_unstable();
 
     input.iter().rev().take(3).sum()
 }
