@@ -113,11 +113,11 @@ pub fn get_input() -> eyre::Result<Vec<Game>> {
     let input = crate::util::get_input(2022, 2)?;
 
     let mut results = Vec::new();
-    for line in input.split('\n') {
+    for line in input.lines() {
         let (x, y) = line
             .trim()
             .split_once(' ')
-            .ok_or_else(|| eyre::eyre!("game was poorly formatted! {line}"))?;
+            .ok_or_else(|| eyre::eyre!("{line} was poorly formatted!"))?;
 
         results.push(Game {
             opponent: x.parse()?,

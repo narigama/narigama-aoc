@@ -19,7 +19,7 @@ pub fn get_input() -> eyre::Result<Vec<u64>> {
     let mut results = Vec::new();
     for elf in input.split("\n\n") {
         let values = elf
-            .split_whitespace()
+            .lines()
             .map(|line| Ok(line.parse()?))
             .collect::<eyre::Result<Vec<_>>>()?;
 

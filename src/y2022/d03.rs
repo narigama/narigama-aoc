@@ -9,7 +9,7 @@ pub fn score_letter(c: &char) -> u64 {
 
 pub fn get_input() -> eyre::Result<Vec<String>> {
     let result = crate::util::get_input(2022, 3)?
-        .split_whitespace()
+        .lines()
         .map(String::from)
         .collect::<Vec<_>>();
 
