@@ -28,6 +28,62 @@ fn criterion_benchmark(c: &mut Criterion) {
             b.iter(|| target::part_two(black_box(&input)))
         });
     }
+
+    #[cfg(feature = "y2022d03")]
+    {
+        use narigama_aoc::y2022::d03 as target;
+        let input = target::get_input().unwrap();
+
+        c.bench_function("y2022d03p01", |b| {
+            b.iter(|| target::part_one(black_box(&input)).unwrap())
+        });
+
+        c.bench_function("y2022d03p02", |b| {
+            b.iter(|| target::part_two(black_box(&input)).unwrap())
+        });
+    }
+
+    #[cfg(feature = "y2022d04")]
+    {
+        use narigama_aoc::y2022::d04 as target;
+        let input = target::get_input().unwrap();
+
+        c.bench_function("y2022d04p01", |b| {
+            b.iter(|| target::part_one(black_box(&input)))
+        });
+
+        c.bench_function("y2022d04p02", |b| {
+            b.iter(|| target::part_two(black_box(&input)))
+        });
+    }
+
+    #[cfg(feature = "y2022d05")]
+    {
+        use narigama_aoc::y2022::d05 as target;
+        let input = target::get_input().unwrap();
+
+        c.bench_function("y2022d05p01", |b| {
+            b.iter(|| target::part_one(black_box(&mut input.clone())).unwrap())
+        });
+
+        c.bench_function("y2022d05p02", |b| {
+            b.iter(|| target::part_two(black_box(&mut input.clone())).unwrap())
+        });
+    }
+
+    #[cfg(feature = "y2022d06")]
+    {
+        use narigama_aoc::y2022::d06 as target;
+        let input = target::get_input().unwrap();
+
+        c.bench_function("y2022d06p01", |b| {
+            b.iter(|| target::part_one(black_box(&mut input.clone())))
+        });
+
+        c.bench_function("y2022d06p02", |b| {
+            b.iter(|| target::part_two(black_box(&mut input.clone())))
+        });
+    }
 }
 
 criterion_group!(benches, criterion_benchmark);
