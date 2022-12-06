@@ -1,5 +1,6 @@
 /input
 /target
+/.vscode
 
 .env*
 tmp*
