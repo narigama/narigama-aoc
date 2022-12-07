@@ -84,6 +84,20 @@ fn criterion_benchmark(c: &mut Criterion) {
             b.iter(|| target::part_two(black_box(&mut input.clone())))
         });
     }
+
+    #[cfg(feature = "y2022d07")]
+    {
+        use narigama_aoc::y2022::d07 as target;
+        let input = target::get_input().unwrap();
+
+        c.bench_function("y2022d07p01", |b| {
+            b.iter(|| target::part_one(black_box(&input)))
+        });
+
+        c.bench_function("y2022d07p02", |b| {
+            b.iter(|| target::part_two(black_box(&input)))
+        });
+    }
 }
 
 criterion_group!(benches, criterion_benchmark);

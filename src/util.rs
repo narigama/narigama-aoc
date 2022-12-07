@@ -61,8 +61,6 @@ pub fn get_input(year: u64, day: u64) -> eyre::Result<String> {
         .context("Check your AOC_SESSION_ID is valid")?
         // finally, grab the body
         .text()?
-        // don't trim, this will remove leading tabs/spaces on the first line
-        // .trim()  
         .to_owned();
 
     // create the dirs and write the file
