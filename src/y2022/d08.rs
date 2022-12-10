@@ -79,38 +79,35 @@ impl Trees {
                 let current = self.get(&(x, y)).unwrap();
 
                 // for each tree, scan and measure distance until you hit a tree as tall as the current
-                // let north = (0..y).rev().take_while(|j| self.get(&(x, *j)).unwrap() < current).count();
                 let mut north = 0;
                 for j in (0..y).rev() {
                     north += 1;
                     if self.get(&(x, j)).unwrap() >= current {
-                        break
-                    }
-                }
-                // let south = (y+1..self.max_y).take_while(|j| self.get(&(x, *j)).unwrap() < current).count();
-                let mut south = 0;
-                for j in y+1..self.max_y {
-                    south += 1;
-                    if self.get(&(x, j)).unwrap() >= current {
-                        break
+                        break;
                     }
                 }
 
-                // let west = (0..x).rev().take_while(|i| self.get(&(*i, y)).unwrap() < current).count();
+                let mut south = 0;
+                for j in y + 1..self.max_y {
+                    south += 1;
+                    if self.get(&(x, j)).unwrap() >= current {
+                        break;
+                    }
+                }
+
                 let mut west = 0;
                 for i in (0..x).rev() {
                     west += 1;
                     if self.get(&(i, y)).unwrap() >= current {
-                        break
+                        break;
                     }
                 }
 
-                // let east = (x+1..self.max_x).take_while(|i| self.get(&(*i, y)).unwrap() < current).count();
                 let mut east = 0;
-                for i in x+1..self.max_x {
+                for i in x + 1..self.max_x {
                     east += 1;
                     if self.get(&(i, y)).unwrap() >= current {
-                        break
+                        break;
                     }
                 }
 
@@ -125,7 +122,7 @@ impl Trees {
 pub fn get_input() -> eyre::Result<Trees> {
     let input = crate::util::get_input(2022, 8)?;
 
-    Trees::from_str(&input)
+    FromStr::from_str(&input)
 }
 
 pub fn part_one(trees: &Trees) -> i64 {

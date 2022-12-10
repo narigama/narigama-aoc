@@ -42,7 +42,7 @@ impl FromStr for Section {
 pub fn get_input() -> eyre::Result<Vec<Section>> {
     Ok(crate::util::get_input(2022, 4)?
         .lines()
-        .map(Section::from_str)
+        .map(FromStr::from_str)
         .collect::<eyre::Result<Vec<_>>>()?)
 }
 

@@ -22,6 +22,9 @@ pub mod d07;
 #[cfg(feature = "y2022d08")]
 pub mod d08;
 
+#[cfg(feature = "y2022d09")]
+pub mod d09;
+
 pub fn main() -> eyre::Result<()> {
     #[cfg(feature = "y2022d01")]
     d01::main()?;
@@ -46,6 +49,9 @@ pub fn main() -> eyre::Result<()> {
 
     #[cfg(feature = "y2022d08")]
     d08::main()?;
+
+    #[cfg(feature = "y2022d09")]
+    d09::main()?;
 
     Ok(())
 }

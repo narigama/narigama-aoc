@@ -50,7 +50,7 @@ pub fn get_input() -> eyre::Result<Vec<u64>> {
     let input = crate::util::get_input(2022, 7)?;
     let commands = input
         .lines()
-        .map(Command::from_str)
+        .map(FromStr::from_str)
         .collect::<eyre::Result<Vec<_>>>()?;
 
     let mut result = Vec::new();
