@@ -84,10 +84,10 @@ pub fn simulate_rope(input: &[Motion], knots: usize) -> u64 {
 }
 
 pub fn get_input() -> eyre::Result<Vec<Motion>> {
-    Ok(crate::util::get_input(2022, 9)?
+    crate::util::get_input(2022, 9)?
         .lines()
         .map(FromStr::from_str)
-        .collect::<eyre::Result<Vec<_>>>()?)
+        .collect::<eyre::Result<Vec<_>>>()
 }
 
 pub fn part_one(input: &[Motion]) -> u64 {

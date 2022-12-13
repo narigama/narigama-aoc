@@ -40,10 +40,10 @@ impl FromStr for Section {
 }
 
 pub fn get_input() -> eyre::Result<Vec<Section>> {
-    Ok(crate::util::get_input(2022, 4)?
+    crate::util::get_input(2022, 4)?
         .lines()
         .map(FromStr::from_str)
-        .collect::<eyre::Result<Vec<_>>>()?)
+        .collect::<eyre::Result<Vec<_>>>()
 }
 
 pub fn part_one(input: &[Section]) -> u64 {

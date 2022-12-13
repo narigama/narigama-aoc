@@ -8,12 +8,10 @@ pub fn score_letter(c: &char) -> u64 {
 }
 
 pub fn get_input() -> eyre::Result<Vec<String>> {
-    let result = crate::util::get_input(2022, 3)?
+    Ok(crate::util::get_input(2022, 3)?
         .lines()
         .map(From::from)
-        .collect::<Vec<_>>();
-
-    Ok(result)
+        .collect::<Vec<_>>())
 }
 
 pub fn part_one(input: &[String]) -> eyre::Result<u64> {
