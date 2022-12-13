@@ -178,8 +178,8 @@ pub fn part_two(input: &[Instruction]) -> eyre::Result<String> {
 pub fn main() -> eyre::Result<()> {
     let input = get_input()?;
 
-    tracing::info!("Y2022D01P01: {}", part_one(&input)?);
-    tracing::info!("Y2022D01P02: {}", part_two(&input)?);
+    tracing::info!("Y2022D10P01: {}", part_one(&input)?);
+    tracing::info!("Y2022D10P02: {}", part_two(&input)?);
 
     Ok(())
 }

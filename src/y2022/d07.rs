@@ -92,8 +92,6 @@ pub fn part_two(input: &[u64]) -> u64 {
 pub fn main() -> eyre::Result<()> {
     let input = get_input()?;
 
-    println!("{input:#?}");
-
     tracing::info!("Y2022D07P01: {}", part_one(&input));
     tracing::info!("Y2022D07P02: {}", part_two(&input));
 

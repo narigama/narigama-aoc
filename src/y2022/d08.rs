@@ -136,8 +136,8 @@ pub fn part_two(trees: &Trees) -> i64 {
 pub fn main() -> eyre::Result<()> {
     let input = get_input()?;
 
-    tracing::info!("Y2022D01P01: {}", part_one(&input));
-    tracing::info!("Y2022D01P02: {}", part_two(&input));
+    tracing::info!("Y2022D08P01: {}", part_one(&input));
+    tracing::info!("Y2022D08P02: {}", part_two(&input));
 
     Ok(())
 }
