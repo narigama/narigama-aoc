@@ -24,7 +24,7 @@ y2022d08 = []
 y2022d09 = []
 y2022d10 = []
 y2022d11 = []
-y2022d12 = []
+y2022d12 = ["pathfinding"]
 y2022d13 = []
 y2022d14 = []
 y2022d15 = []
@@ -40,13 +40,16 @@ y2022d24 = []
 y2022d25 = []
 
 [dependencies]
-criterion = "0.4.0"
 derive_more = "0.99.17"
 dotenv = "0.15.0"
 eyre = "0.6.8"
+pathfinding = { version = "4.1.1", optional = true }
 reqwest = { version = "0.11.13", features = ["blocking", "cookies"] }
 tracing = "0.1.37"
 tracing-subscriber = "0.3.16"
+
+[dev-dependencies]
+criterion = "0.4.0"
 
 [[bench]]
 name = "aoc2022"
