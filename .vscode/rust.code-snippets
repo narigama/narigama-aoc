@@ -1,0 +1,40 @@
+{
+    "Solution Template": {
+        "prefix": "solution",
+        "body": [
+            "pub fn get_input() -> eyre::Result<()> {",
+            "    let input = crate::util::get_input($1, $2)?;",
+            "    $0",
+            "",
+            "    todo!()",
+            "}",
+            "",
+            "pub fn part_one(input: &()) -> u64 {",
+            "    todo!()",
+            "}",
+            "",
+            "pub fn part_two(input: &()) -> u64 {",
+            "    todo!()",
+            "}",
+            "",
+            "pub fn main() -> eyre::Result<()> {",
+            "    let input = get_input()?;",
+            "",
+            "    tracing::info!(\"Y$1D$2P01: {}\", part_one(&input));",
+            "    tracing::info!(\"Y$1D$2P02: {}\", part_two(&input));",
+            "",
+            "    Ok(())",
+            "}"
+        ],
+    },
+    "Solution Include": {
+        "prefix": "module",
+        "body": [
+            "#[cfg(feature = \"y$1d$2\")]",
+            "pub mod d$2;",
+            "$0",
+            "    #[cfg(feature = \"y$1d$2\")]",
+            "    d$2::main()?;"
+        ],
+    }
+}

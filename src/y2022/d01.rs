@@ -44,7 +44,7 @@ pub fn main() -> eyre::Result<()> {
     let input = get_input()?;
 
     tracing::info!("Y2022D01P01: {}", part_one(&input));
-    tracing::info!("Y2022D02P02: {}", part_two(&input));
+    tracing::info!("Y2022D01P02: {}", part_two(&input));
 
     Ok(())
 }

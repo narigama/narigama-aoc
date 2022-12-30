@@ -25,7 +25,7 @@ y2022d09 = []
 y2022d10 = []
 y2022d11 = []
 y2022d12 = ["pathfinding"]
-y2022d13 = []
+y2022d13 = ["serde_json", "itertools"]
 y2022d14 = []
 y2022d15 = []
 y2022d16 = []
@@ -43,8 +43,10 @@ y2022d25 = []
 derive_more = "0.99.17"
 dotenv = "0.15.0"
 eyre = "0.6.8"
+itertools = { version = "0.10.5", optional = true }
 pathfinding = { version = "4.1.1", optional = true }
 reqwest = { version = "0.11.13", features = ["blocking", "cookies"] }
+serde_json = { version = "1.0.91", optional = true }
 tracing = "0.1.37"
 tracing-subscriber = "0.3.16"
 

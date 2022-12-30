@@ -120,8 +120,8 @@ pub fn part_two(input: &Matrix<Tile>) -> eyre::Result<u64> {
 pub fn main() -> eyre::Result<()> {
     let input = get_input()?;
 
-    tracing::info!("Y2022D01P01: {}", part_one(&input)?);
-    tracing::info!("Y2022D01P02: {}", part_two(&input)?);
+    tracing::info!("Y2022D12P01: {}", part_one(&input)?);
+    tracing::info!("Y2022D12P02: {}", part_two(&input)?);
 
     Ok(())
 }
